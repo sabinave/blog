@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Lavalamp Progress</title>
+  <title>Lavalamp</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -50,17 +52,17 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/gif2.gif')">
+  <header class="masthead" style="background-image: url('img/gif3.gif')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Lavalamp Progress</h1>
-            <h2 class="subheading">After experimenting and looking closer at lava lamp implementations we have decided on implementing a lava lamp with somewhat reality-based functions.</h2>
+            <h1>Final Outcome - Lavalamp</h1>
+            <h2 class="subheading">After inplementing the reality based physics for the lavalamp, also sliders where added to create a easy Graphical User Interface (GUI)  for paramethers such as Heat, blob-density and environment-density. </h2>
             <span class="meta">Posted by
-              <a href="#">Veronica Hage</a>
-              on Wednesday May 22, 2019</span>
+              <a href="#">Evelina Hedberg </a>
+              on Monday May 27, 2019</span>
           </div>
         </div>
       </div>
@@ -72,32 +74,30 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>After experimenting and looking closer at lava lamp implementations we have decided on implementing a lava lamp with somewhat reality-based functions.</p>
+          <p> The following formulas where used to obtain the physics for the blob: </p>
+          <img class="img-fluid" src="img/physics-formula.png" alt="">
+          <p>After inplementing the reality based physics for the lavalamp, also sliders where added to create a easy graphical user interface for the heat paramether.
+          A more suitable environment where also added to make the scene more realistic.</p>
 
-            To do this we need to:
+          <p>To make it more even more realistic we:</p>
+          <p> •	Added small random movements in all directions to mimic a realistic behaviour</p>
+          <p> •	Put a light color to the lamp that changes depending of the heat selected.</p>
+          <p> •	Glass walls </p>
+          <p> •	Dark environment to make the blob appear clear through its color </p>
+          <p> • A delay was added to the movements of the blobs so that the heat does not affect the blob right away </p>
 
-            <p>•	Set a density to each blob</p>
-            <img class="img-fluid" src="img/density.jpg" alt="">
-            <p>When the blob expands it will float upwards. When it reaches the top of the lava lamp it will then contract again, causing the density to increase and the blob will sink.</p>
-            	<p>•	Simulate a simplified heat emission from the bottom of the lamp.<p>
-              <img class="img-fluid" src="img/lavalamp.jpeg" alt="">
+          <p> The following movie is our final outcome (note that the movie has been speeded up): </p>
+          <iframe src="https://drive.google.com/file/d/1EfxuemkjppBaCQDv4hoJ4si4wCd0QsCK/preview" width="730" height="480"></iframe>
 
-            <p> The simulated heat emission was obtained through the following formula: </p>
-            <iframe src="https://drive.google.com/file/d/1tW3hVfvztNzoZHcio8d5YlpMi_T8oNfF/preview" width="730" height="480"></iframe>
+          <p> The code for the project can be found <a href="https://github.com/vronc/TsuTsuTsu-Tsunami">here</a>.
+           The code that has been mobified from the initial startcode are the following functions
+           <br/>
+           <b>MCblob:</b> Update() and Start()
+           <br/>
+           The additional code files used, have been added and written by us.
+          </p>
 
-            <p>The heat will have a fixed value at the bottom of the lamp that will decrease (preferably exponentially) when distance from it grows.</p>
-            The heat will affect the blob’s density by simulating a volume expansion of the blob when closer to the bottom and according to the set temperature. If hot enough the radius of the blob will increase.
-            The sought after effect:
-            Our solution is simplified as in the real world fluid heating is done by convection which is more complicated than this.
-            Here is an example of how the size of the blobs is affected by the distance from the bottom:
 
-            <iframe src="https://drive.google.com/file/d/1s9pkrWRZ4PppeOV8rcem6sesoxA0jc_3/preview" width="730" height="480"></iframe>
-
-            <p>Further steps:</p>
-            <p> •	Apply randomness to somewhat simulate more realistically moving blobs.
-              <img class="img-fluid" src="img/blobs.jpeg" alt="">
-            	<p>•	Add a GUI where the user can change parameters such as environmental density and heat.</p>
-            <img class="img-fluid" src="img/ll.gif" alt="">
         </div>
       </div>
     </div>
